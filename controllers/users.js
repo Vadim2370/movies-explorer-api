@@ -73,8 +73,7 @@ const updateUserProfile = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError(ERROR_MESSAGE.BAD_REQUEST));
-      }
-      if (err.code === 11000) {
+      } else if (err.code === 11000) {
         next(new EmailError(ERROR_MESSAGE.BUSY_EMAIL));
       } else {
         next(err);

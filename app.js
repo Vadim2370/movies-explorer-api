@@ -30,4 +30,3 @@ app.use(errorLogger);
 app.use(errors());
 app.use(handleError);
 app.listen(PORT);
-console.log(`port ${PORT}`);

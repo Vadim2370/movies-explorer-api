@@ -9,6 +9,9 @@ const ERROR_MESSAGE = {
   BUSY_EMAIL: 'Этот email занят',
   INCORRECT_EMAIL: 'Некорректный email',
   INCORRECT_LINK: 'Некорректная ссылка',
+  INTERNAL_SERVER_ERROR: 'Ошибка сервера',
 };
 
-module.exports = { ERROR_MESSAGE };
+const CHK_URL = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)?/;
+
+module.exports = { ERROR_MESSAGE, CHK_URL };
